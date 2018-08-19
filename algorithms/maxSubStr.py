@@ -4,7 +4,7 @@ all of the given characters.
 
 The characters can be in any order.
 """
-from collections import defaultdict
+from collections import Counter
 
 
 def is_hit(counter, given):
@@ -15,17 +15,17 @@ def is_hit(counter, given):
 
 
 def preprocess(stream, given):
-    buffer = []
-    count_given = defaultdict(int)
+    substr = []
+    count_given = Counter()
     for ch in stream:
         if ch in given:
-            buffer.append(ch)
+            substr.append(ch)
             count_given[ch] += 1
-        elif buffer:
+        elif substr:
             if is_hit(count_given, given):
-                yield "".join(buffer)
-            buffer = []
-            count_given = defaultdict(int)
+                yield "".join(substr)
+            substr = []
+            count_given = Counter()
 
 
 def main(stream, given):
