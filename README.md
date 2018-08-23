@@ -4,9 +4,9 @@
 
 # Algorithms
 1. Search
-  1. [Binary Search](algorithms/binary_search.py)
+    1. [Binary Search](algorithms/binary_search.py)
 2. Sorting
-  1. [Merge Sort](algorithms/merge_sort.py)
+    1. [Merge Sort](algorithms/merge_sort.py)
 
 # Problems
 1. [GCD](problems/gcd.py)
